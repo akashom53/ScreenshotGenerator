@@ -1,0 +1,11 @@
+{
+  "Iphone" : {
+    "templateImagePath" : "./assets/iphone_1.png",
+    "targetCoordinates" : [
+      [219, 261],
+      [375, 219],
+      [478, 501],
+      [317, 552]
+    ]
+  }
+}
