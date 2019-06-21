@@ -7,5 +7,14 @@
       [478, 501],
       [317, 552]
     ]
+  },
+  "Iphone_2" : {
+    "templateImagePath" : "./assets/iphone_2.jpg",
+    "targetCoordinates" : [
+      [383, 234],
+      [519, 211],
+      [580, 445],
+      [441, 473]
+    ]
   }
 }

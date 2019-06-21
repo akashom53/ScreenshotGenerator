@@ -28,6 +28,9 @@ class Template {
   static get IPHONE_1() {
     return new Template('Iphone')
   }
+  static get IPHONE_2() {
+    return new Template('Iphone_2')
+  }
 }
 
 export default Template
