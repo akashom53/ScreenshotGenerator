@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ScreenshotGenerator/static/css/main.359b6a0c.chunk.css",
+    "main.js": "/ScreenshotGenerator/static/js/main.7871fd1a.chunk.js",
+    "main.js.map": "/ScreenshotGenerator/static/js/main.7871fd1a.chunk.js.map",
+    "runtime~main.js": "/ScreenshotGenerator/static/js/runtime~main.0f8deac3.js",
+    "runtime~main.js.map": "/ScreenshotGenerator/static/js/runtime~main.0f8deac3.js.map",
+    "static/js/2.2fc83c1a.chunk.js": "/ScreenshotGenerator/static/js/2.2fc83c1a.chunk.js",
+    "static/js/2.2fc83c1a.chunk.js.map": "/ScreenshotGenerator/static/js/2.2fc83c1a.chunk.js.map",
+    "index.html": "/ScreenshotGenerator/index.html",
+    "precache-manifest.ec5d28b28ae6e9b03b8eddc099876b16.js": "/ScreenshotGenerator/precache-manifest.ec5d28b28ae6e9b03b8eddc099876b16.js",
+    "service-worker.js": "/ScreenshotGenerator/service-worker.js",
+    "static/css/main.359b6a0c.chunk.css.map": "/ScreenshotGenerator/static/css/main.359b6a0c.chunk.css.map",
+    "static/media/iphone_1.png": "/ScreenshotGenerator/static/media/iphone_1.85eec3f8.png",
+    "static/media/iphone_2.jpg": "/ScreenshotGenerator/static/media/iphone_2.a2651bc3.jpg"
+  }
+}
