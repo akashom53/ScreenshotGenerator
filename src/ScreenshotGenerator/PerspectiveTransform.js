@@ -1,7 +1,8 @@
 class PerspectiveTransform {
 
-  constructor(canvas, image, bgImage) {
+  constructor(canvas, image, bgImage, bgColor) {
     this.bgImage = bgImage
+    this.bgColor = bgColor
     this.ctxd = canvas.getContext('2d')
     this.cvso = document.createElement('canvas')
     this.cvso.width = parseInt(image.width)
@@ -13,6 +14,7 @@ class PerspectiveTransform {
     cvst.height = this.ctxd.canvas.height
     this.ctxt = cvst.getContext('2d')
   }
+
 
   draw(points) {
     var d0x = points[0][0]
@@ -27,7 +29,7 @@ class PerspectiveTransform {
       Math.sqrt(Math.pow(d0x - d1x, 2) + Math.pow(d0y - d1y, 2)),
       Math.sqrt(Math.pow(d1x - d2x, 2) + Math.pow(d1y - d2y, 2)),
       Math.sqrt(Math.pow(d2x - d3x, 2) + Math.pow(d2y - d3y, 2)),
-      Math.sqrt(Math.pow(d3x - d0x, 2) + Math.pow(d3y - d0y, 2)) 
+      Math.sqrt(Math.pow(d3x - d0x, 2) + Math.pow(d3y - d0y, 2))
     ]
     //
     var ow = this.cvso.width
@@ -101,12 +103,21 @@ class PerspectiveTransform {
         ctxt.setTransform(1, 0, 0, 1, 0, 0)
       }
     }
-    this.ctxd.drawImage(this.bgImage, 0, 0)
-    this.ctxd.save()
+    this.ctxd.scale(0.4, 0.4)
+    // this.ctxd.save()
     this.ctxd.imageSmoothingEnabled = true
+    // this.drawColor()
     this.ctxd.drawImage(ctxt.canvas, 0, 0)
+    this.ctxd.drawImage(this.bgImage, 0, 0)
     // this._applyMask(this.ctxd, [[d0x, d0y], [d1x, d1y], [d2x, d2y], [d3x, d3y]])
-    this.ctxd.restore()
+    // this.ctxd.restore()
+  }
+
+  drawColor() {
+    this.ctxd.beginPath();
+    this.ctxd.rect(0, 0, this.bgImage.width, this.bgImage.height);
+    this.ctxd.fillStyle = this.bgColor
+    this.ctxd.fill();
   }
 
 

@@ -31,6 +31,9 @@ class Template {
   static get IPHONE_2() {
     return new Template('Iphone_2')
   }
+  static get IPHONE_TRANSPARENT() {
+    return new Template('Iphone_Transparent')
+  }
 }
 
 export default Template
