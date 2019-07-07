@@ -61,5 +61,14 @@
         1700
       ]
     ]
+  },
+  "Iphone_Transparent" : {
+    "templateImagePath" : "./assets/iphone_transparent.png",
+    "targetCoordinates" : [
+      [260, 701],
+      [822, 701],
+      [822, 1700],
+      [260, 1700]
+    ]
   }
 }
