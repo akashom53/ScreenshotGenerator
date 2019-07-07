@@ -1,3 +1,4 @@
+/* eslint-disable */
 class PerspectiveTransform {
 
   constructor(canvas, image, bgImage, bgColor) {
@@ -106,7 +107,9 @@ class PerspectiveTransform {
     // this.ctxd.scale(0.4, 0.4)
     // this.ctxd.save()
     this.ctxd.imageSmoothingEnabled = true
-    // this.drawColor()
+    if (this.bgColor) {
+      this.drawColor()
+    }
     this.ctxd.drawImage(this.bgImage, 0, 0)
     this.ctxd.drawImage(ctxt.canvas, 0, 0)
     // this._applyMask(this.ctxd, [[d0x, d0y], [d1x, d1y], [d2x, d2y], [d3x, d3y]])

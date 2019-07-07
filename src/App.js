@@ -11,6 +11,13 @@ class App extends React.Component {
     this.imageSelected = this.imageSelected.bind(this)
   }
 
+  download = async () => {
+    this.refs.generator.getImage((img) => {
+
+      window.location = img
+    })
+  }
+
   imageSelected(event) {
     let state = { image: URL.createObjectURL(event.target.files[0]) }
     let templateSelector = this.refs.templateSelector
@@ -24,6 +31,8 @@ class App extends React.Component {
       case 2:
         state.template = Template.IPHONE_TRANSPARENT
         break
+      default:
+        break
     }
     this.setState(state)
   }
@@ -34,7 +43,8 @@ class App extends React.Component {
       return (
         <div className="App">
           <header className="App-header">
-            <ScreenshotGenerator image={image} template={this.state.template} />
+            <ScreenshotGenerator ref='generator' image={image} template={this.state.template} color='red' />
+            <button onClick={this.download}>download</button>
           </header>
         </div>
       );

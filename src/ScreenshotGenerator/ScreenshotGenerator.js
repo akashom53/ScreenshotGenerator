@@ -1,10 +1,25 @@
 import React from 'react';
 import PerspectiveTransform from "./PerspectiveTransform";
-import Template from "./Template";
 
 class ScreenshotGenerator extends React.Component {
 
-
+  getImage = (callback) => {
+    let canvas = document.createElement('canvas')
+    let image = new Image()
+    let bgImage = new Image()
+    let template = this.props.template
+    bgImage.onload = () => {
+      image.src = this.props.image
+    }
+    image.onload = () => {
+      canvas.width = bgImage.width;
+      canvas.height = bgImage.height;
+      let p = new PerspectiveTransform(canvas, image, bgImage, this.props.color);
+      p.draw(template.targetCoordinates);
+      callback(canvas.toDataURL('image/png'))
+    }
+    bgImage.src = template.image
+  }
 
   componentDidMount() {
     let canvas = this.refs.canvas
@@ -29,6 +44,11 @@ class ScreenshotGenerator extends React.Component {
       container.style.height = '100vh'
     }
     bgImage.src = template.image
+    canvas.style.background = this.props.color
+  }
+
+  componentDidUpdate() {
+    this.refs.canvas.style.background = this.props.color
   }
 
   render() {
