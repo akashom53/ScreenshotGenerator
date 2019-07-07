@@ -1,20 +1,65 @@
 {
-  "Iphone" : {
-    "templateImagePath" : "./assets/iphone_1.png",
-    "targetCoordinates" : [
-      [219, 261],
-      [375, 219],
-      [478, 501],
-      [317, 552]
+  "Iphone": {
+    "templateImagePath": "./assets/iphone_1.png",
+    "targetCoordinates": [
+      [
+        219,
+        261
+      ],
+      [
+        375,
+        219
+      ],
+      [
+        478,
+        501
+      ],
+      [
+        317,
+        552
+      ]
     ]
   },
-  "Iphone_2" : {
-    "templateImagePath" : "./assets/iphone_2.jpg",
-    "targetCoordinates" : [
-      [383, 234],
-      [519, 211],
-      [580, 445],
-      [441, 473]
+  "Iphone_2": {
+    "templateImagePath": "./assets/iphone_2.jpg",
+    "targetCoordinates": [
+      [
+        383,
+        234
+      ],
+      [
+        519,
+        211
+      ],
+      [
+        580,
+        445
+      ],
+      [
+        441,
+        473
+      ]
+    ]
+  },
+  "Iphone_Transparent": {
+    "templateImagePath": "./assets/iphone_transparent.png",
+    "targetCoordinates": [
+      [
+        260,
+        701
+      ],
+      [
+        822,
+        701
+      ],
+      [
+        822,
+        1700
+      ],
+      [
+        260,
+        1700
+      ]
     ]
   }
 }

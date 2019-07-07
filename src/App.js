@@ -19,8 +19,11 @@ class App extends React.Component {
         state.template = Template.IPHONE_1
         break
       case 1:
-          state.template = Template.IPHONE_2
-          break
+        state.template = Template.IPHONE_2
+        break
+      case 2:
+        state.template = Template.IPHONE_TRANSPARENT
+        break
     }
     this.setState(state)
   }
@@ -42,6 +45,7 @@ class App extends React.Component {
             <select name="templates" ref="templateSelector">
               <option value="iphone1">iPhone Template 1</option>
               <option value="iphone2">iPhone Template 2</option>
+              <option value="Iphone_Transparent">iPhone Template Transparent</option>
             </select>
             <input type='file' onChange={this.imageSelected} accept="image/*" />
           </header>
